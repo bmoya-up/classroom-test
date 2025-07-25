@@ -12,7 +12,9 @@ beforeAll(async () => {
   server = http.createServer({ root: '.' });
   server.listen(8080);
 
-  browser = await puppeteer.launch();
+  browser = await puppeteer.launch({
+    args: ['--no-sandbox', '--disable-setuid-sandbox']
+  });
   page = await browser.newPage();
   await page.goto('http://localhost:8080/index.html');
 });
