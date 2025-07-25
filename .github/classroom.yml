@@ -1,0 +1,10 @@
+assignment:
+  title: "HTML Assignment 1: Basic Page"
+  autograding:
+    setup: |
+      npm install
+    tests:
+      - name: "H1 tag test"
+        run: npm test
+        timeout: 10
+        points: 10
